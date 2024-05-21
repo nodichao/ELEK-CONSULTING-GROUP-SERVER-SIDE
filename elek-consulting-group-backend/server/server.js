@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(cors({
-    origin: ['http://localhost:3000', 'http://localhost:5000'],
+    origin: ['https://elekconsultinggroup.onrender.com', 'http://localhost:5000'],
     credentials: true
 }));
 
