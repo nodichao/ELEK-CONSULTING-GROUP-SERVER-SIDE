@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(cors({
-    origin: ['https://664d12e70887e93a0b3b244a--soft-naiad-90605f.netlify.app/', 'http://localhost:5000'],
+    origin: ['https://664d12e70887e93a0b3b244a--soft-naiad-90605f.netlify.app', 'http://localhost:5000'],
     credentials: true
 }));
 
