@@ -53,7 +53,12 @@ module.exports.loginUser = async (req, res)=>{
       try{
             const user = await UserModel.login(email,password);
             const token = createToken(user._id);
-            res.cookie('jwt',token,{maxAge:maxAge*1000});
+            res.cookie('jwt',token,{maxAge:maxAge*1000},{
+                  domain: 'front-end-elek-consulting-group.vercel.app', 
+                  sameSite: 'none',
+                  secure: true, 
+                  httpOnly: true 
+                });
             res.status(200).json(user);
       }catch(err){
             const errors = ErrorHandler(err);

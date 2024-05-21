@@ -20,7 +20,8 @@ app.use(cookieParser());
 app.use(cors({
     origin: ['https://front-end-elek-consulting-group.vercel.app'],
     methods :["POST","GET","PUT","DELETE","OPTIONS"],
-    credentials: true
+    credentials: true,
+    allowedHeaders: ['Authorization', 'Content-Type']
 }));
 
 
