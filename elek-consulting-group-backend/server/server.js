@@ -12,7 +12,7 @@ const multer = require('multer');
 const ArticleModel = require('../models/ArticleModel');
 
 
-require('dotenv').config({ path: '../.env' });
+require('dotenv').config({ path: path.resolve(__dirname,'../.env')  });
 require('../config/dbConfig');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -66,8 +66,9 @@ app.post('/upload',upload.single('pdf'), async(req, res) => {
         res.status(400).json({error});
     }});
  
+const PORT = process.env.PORT || 5000;
 
-app.listen(process.env.PORT, () => {
+app.listen(PORT, () => {
     console.log('Serveur démarré à l\'URL localhost:' + process.env.PORT);
 });
 
