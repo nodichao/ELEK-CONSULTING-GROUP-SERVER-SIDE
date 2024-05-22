@@ -14,9 +14,7 @@ const ArticleModel = require('../models/ArticleModel');
 
 require('dotenv').config({ path: path.resolve(__dirname,'../.env')  });
 require('../config/dbConfig');
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(cookieParser());
+
 app.use(cors({
     origin: 'https://front-end-elek-consulting-group.vercel.app',
     methods :["POST","GET","HEAD","PUT","DELETE","OPTIONS"],
@@ -26,7 +24,9 @@ app.use(cors({
 }));
 
 
-
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
 
 const storage = multer.diskStorage(
   {
