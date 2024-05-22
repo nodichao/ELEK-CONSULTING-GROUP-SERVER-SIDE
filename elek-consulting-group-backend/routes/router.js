@@ -8,7 +8,7 @@ const { findCanevas, createCanevas } = require('../controllers/CanevasController
 router.post('/api/user',createUser);
 router.post('/api/login',loginUser);
 router.get('/api/user_logout',logoutUser);
-router.get('/api/user',findUsers);
+router.get('/api/user', AuthMiddleware,findUsers);
 router.get('/api/pro', AuthMiddleware,findPros);
 router.get('/api/user/:id',AuthMiddleware, findOneUser);
 router.put('/api/user/:id',AuthMiddleware, updateUser);
