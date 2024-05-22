@@ -17,12 +17,12 @@ require('../config/dbConfig');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-/*app.use(cors({
-    origin: ['https://front-end-elek-consulting-group.vercel.app'],
+app.use(cors({
+    origin: 'https://front-end-elek-consulting-group.vercel.app',
     methods :["POST","GET","PUT","DELETE","OPTIONS"],
     credentials: true,
     allowedHeaders: ['Authorization', 'Content-Type']
-}));*/
+}));
 
 
 
