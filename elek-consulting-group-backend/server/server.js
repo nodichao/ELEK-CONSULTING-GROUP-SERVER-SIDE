@@ -16,7 +16,7 @@ require('dotenv').config({ path: path.resolve(__dirname,'../.env')  });
 require('../config/dbConfig');
 
 app.use(cors({
-    origin: ['http://localhost:3000','https://magenta-gaufre-92b438.netlify.app'],
+    origin: ['http://localhost:3000','https://admirable-crumble-cfd9c6.netlify.app'],
     methods :["POST","GET","HEAD","PUT","DELETE","OPTIONS"],
     allowedHeaders: ['Authorization', 'Content-Type'],
     credentials: true
