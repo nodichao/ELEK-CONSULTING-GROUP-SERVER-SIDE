@@ -15,11 +15,11 @@ const ArticleModel = require('../models/ArticleModel');
 require('dotenv').config({ path: path.resolve(__dirname,'../.env')  });
 require('../config/dbConfig');
 
-app.use(cors({
+app.use(cors(/*{
     origin: 'https://front-end-elek-consulting-group.vercel.app',
     methods :["POST","GET","HEAD","PUT","DELETE","OPTIONS"],
     credentials: true
-}));
+}*/));
 
 
 app.use(express.json());
