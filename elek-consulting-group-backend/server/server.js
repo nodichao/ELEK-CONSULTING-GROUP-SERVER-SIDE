@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(cors({
-    origin: ['https://front-end-elek-consulting-group.vercel.app'],
+    origin: ['*'],
     methods :["POST","GET","PUT","DELETE","OPTIONS"],
     credentials: true,
     allowedHeaders: ['Authorization', 'Content-Type']
