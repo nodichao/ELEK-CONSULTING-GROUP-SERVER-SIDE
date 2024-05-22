@@ -18,7 +18,6 @@ require('../config/dbConfig');
 app.use(cors({
     origin: 'https://front-end-elek-consulting-group.vercel.app',
     methods :["POST","GET","HEAD","PUT","DELETE","OPTIONS"],
-    optionsSuccessStatus:204,
     credentials: true,
     allowedHeaders: ['Authorization', 'Content-Type']
 }));
