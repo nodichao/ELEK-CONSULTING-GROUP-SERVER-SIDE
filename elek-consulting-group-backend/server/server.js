@@ -16,7 +16,7 @@ require('dotenv').config({ path: path.resolve(__dirname,'../.env')  });
 require('../config/dbConfig');
 
 app.use(cors({
-    origin: 'https://front-end-elek-consulting-group.vercel.app',
+    origin: 'http://localhost:3000',
     methods :["POST","GET","HEAD","PUT","DELETE","OPTIONS"],
     credentials: true
 }));
