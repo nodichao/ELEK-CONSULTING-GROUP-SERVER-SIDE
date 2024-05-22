@@ -18,6 +18,7 @@ require('../config/dbConfig');
 app.use(cors({
     origin: 'http://localhost:3000',
     methods :["POST","GET","HEAD","PUT","DELETE","OPTIONS"],
+    allowedHeaders: ['Authorization', 'Content-Type'],
     credentials: true
 }));
 
